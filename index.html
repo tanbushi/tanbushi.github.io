@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 
 <body>
@@ -21,8 +20,74 @@
       subMaxLevel: 3
     }
   </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <div id="cdn-container"></div>
+
 </body>
+
+<script>
+  var cssUrls = {} // css对应的cdn文件rul列表
+  cssUrls['vue'] = {} // vue 样式 css
+  cssUrls['vue']['jsdelivr'] = '//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css'
+  cssUrls['vue']['onmicrosoft'] = '//jsd.onmicrosoft.cn/npm/docsify@4/lib/themes/vue.css'
+  cssUrls['sitebar_collapse_folder'] = {} // 侧边栏目录以文件夹图标展示
+  cssUrls['sitebar_collapse_folder']['jsdelivr'] = '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css'
+  cssUrls['sitebar_collapse_arrow'] = {} // 侧边栏目录以箭头图标展示
+  cssUrls['sitebar_collapse_arrow']['jsdelivr'] = '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css'
+
+  var cssConfig = [ // 需要用到的css加载配置项
+    ['vue', 'jsdelivr'],
+    // ['sitebar_collapse_folder','jsdelivr'],
+    ['sitebar_collapse_arrow', 'jsdelivr']
+  ]
+
+  var jsUrls={}
+  jsUrls['vue']={}
+  jsUrls['vue']['jsdelivr']='//cdn.jsdelivr.net/npm/docsify@4'
+  jsUrls['sidebar_collapse']={}
+  jsUrls['sidebar_collapse']['jsdelivr']='//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js'
+  jsUrls['copy_code']={}
+  jsUrls['copy_code']['jsdelivr']='https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js'
+
+  var jsConfig = [ // 需要用到的js加载配置项
+    ['vue', 'jsdelivr']
+  ]
+
+  function loadAllCss(_cssUrls, _cssConfig) {
+    _cssConfig.forEach(function (element) {
+      loadCss(element[0], element[1])
+    });
+  }
+
+  function loadCss(name, site) {
+    console.log(name, site)
+    var CdnContainer = document.getElementById("cdn-container"); // 根据id获取元素
+    var linkElement = document.createElement("link");
+    linkElement.setAttribute("rel", "stylesheet")
+    linkElement.setAttribute("href", cssUrls[name][site]);
+    CdnContainer.appendChild(linkElement)
+  }
+
+  function loadAllJs(_jsUrls, _jsConfig) {
+    _jsConfig.forEach(function (element) {
+      loadJs(element[0], element[1])
+    });
+  }
+
+  function loadJs(name, site) {
+    console.log(name, site)
+    var CdnContainer = document.getElementById("cdn-container"); // 根据id获取元素
+    var linkElement = document.createElement("script");
+    linkElement.setAttribute("src", jsUrls[name][site]);
+    CdnContainer.appendChild(linkElement)
+  }
+
+  window.onload = function () {
+    loadAllCss(cssUrls, cssConfig)
+    loadAllJs(jsUrls, jsConfig)
+  }
+
+
+</script>
 
 </html>
