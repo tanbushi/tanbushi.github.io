@@ -25,112 +25,148 @@
 
 </body>
 
+<script src="render.js"></script>
+<!-- <script src="config.js"></script> -->
+
 <script>
+  // console.log(cssCanUse['vue']['jsdelivr'])
+  // console.log(jsCanUse)
 
-  const cssUrlArr = [
-    ['A1','A2','A3','A4','A5'],
-    ['vue', 'jsdelivr', '//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css'],
-    ['vue', 'onmicrosoft', '//jsd.onmicrosoft.cn/npm/docsify@4/lib/themes/vue.css'],
-    ['sidebar_collapse_folder', 'jsdelivr', '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css'],
-    ['sidebar_collapse_arrow', 'jsdelivr', '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css'],
-  ]
-  var cssUrlObj = {}
+  // cssKeys.forEach(function (key) {
+  //   var tmpObj=cssCanUse
+  //   key.forEach(function(keyField){
+  //     tmpObj=tmpObj[keyField]
+  //   })
+  //   console.log('tmpObj',tmpObj)
+  // })
 
-  cssUrlArr.forEach(function (_arr) { 
-    ss(_arr, cssUrlObj)
-  })
+  // const cssUrlArr = [
+  //   ['A1', 'A2', 'A3', 'A4', 'A5'],
+  //   ['vue', 'jsdelivr', '//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css'],
+  //   ['vue', 'onmicrosoft', '//jsd.onmicrosoft.cn/npm/docsify@4/lib/themes/vue.css'],
+  //   ['sidebar_collapse_folder', 'jsdelivr', '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css'],
+  //   ['sidebar_collapse_arrow', 'jsdelivr', '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css'],
+  // ]
+  // var cssUrlObj = {}
 
-  function ss(_srcArr, _destObj){
-    let key=_srcArr[0]
-    _destObj[key]={}
-    _srcArr.shift()
-    if (_srcArr.length==1){
-      _destObj[key]=_srcArr[0]
-    }
-    else{
-    ss(_srcArr,_destObj[key])
-    }
-  }
+  // cssUrlArr.forEach(function (_arr) {
+  //   ss(_arr, cssUrlObj)
+  // })
 
-  console.log('cssUrlObj',cssUrlObj)
+  // function ss(_srcArr, _destObj) {
+  //   let key = _srcArr[0]
+  //   _destObj[key] = {}
+  //   _srcArr.shift()
+  //   if (_srcArr.length == 1) {
+  //     _destObj[key] = _srcArr[0]
+  //   }
+  //   else {
+  //     ss(_srcArr, _destObj[key])
+  //   }
+  // }
+
+  // console.log('cssUrlObj', cssUrlObj)
 
 
-  const testObj = {
-    vue: {
-      jsdelivr: '//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css',
-      onmicrosoft: '//jsd.onmicrosoft.cn/npm/docsify@4/lib/themes/vue.css'
-    },
-    sidebar_collapse_folder: {
-      jsdelivr: '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css'
-    },
-    sidebar_collapse_arrow: {
-      jsdelivr: '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css'
-    }
-  }
-  // console.log(testObj['vue'])
+  // const testObj = {
+  //   vue: {
+  //     jsdelivr: '//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css',
+  //     onmicrosoft: '//jsd.onmicrosoft.cn/npm/docsify@4/lib/themes/vue.css'
+  //   },
+  //   sidebar_collapse_folder: {
+  //     jsdelivr: '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css'
+  //   },
+  //   sidebar_collapse_arrow: {
+  //     jsdelivr: '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css'
+  //   }
+  // }
+  // // console.log(testObj['vue'])
 
-  var cssUrls = {} // css对应的cdn文件rul列表
-  cssUrls['vue'] = {} // vue 样式 css
-  cssUrls['vue']['jsdelivr'] = '//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css'
-  cssUrls['vue']['onmicrosoft'] = '//jsd.onmicrosoft.cn/npm/docsify@4/lib/themes/vue.css'
-  cssUrls['sidebar_collapse_folder'] = {} // 侧边栏目录以文件夹图标展示
-  cssUrls['sidebar_collapse_folder']['jsdelivr'] = '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css'
-  cssUrls['sidebar_collapse_arrow'] = {} // 侧边栏目录以箭头图标展示
-  cssUrls['sidebar_collapse_arrow']['jsdelivr'] = '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css'
+  // var cssUrls = {} // css对应的cdn文件rul列表
+  // cssUrls['vue'] = {} // vue 样式 css
+  // cssUrls['vue']['jsdelivr'] = '//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css'
+  // cssUrls['vue']['onmicrosoft'] = '//jsd.onmicrosoft.cn/npm/docsify@4/lib/themes/vue.css'
+  // cssUrls['sidebar_collapse_folder'] = {} // 侧边栏目录以文件夹图标展示
+  // cssUrls['sidebar_collapse_folder']['jsdelivr'] =
+  //   '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css'
+  // cssUrls['sidebar_collapse_arrow'] = {} // 侧边栏目录以箭头图标展示
+  // cssUrls['sidebar_collapse_arrow']['jsdelivr'] = '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css'
 
-  var cssConfig = [ // 需要用到的css加载配置项
-    ['vue', 'jsdelivr'],
-    // ['sidebar_collapse_folder','jsdelivr'],
-    ['sidebar_collapse_arrow', 'jsdelivr']
-  ]
+  // var cssConfig = [ // 需要用到的css加载配置项
+  //   ['vue', 'jsdelivr'],
+  //   // ['sidebar_collapse_folder','jsdelivr'],
+  //   ['sidebar_collapse_arrow', 'jsdelivr']
+  // ]
 
-  var jsUrls = {}
-  jsUrls['vue'] = {}
-  jsUrls['vue']['jsdelivr'] = '//cdn.jsdelivr.net/npm/docsify@4'
-  jsUrls['sidebar_collapse'] = {}
-  jsUrls['sidebar_collapse']['jsdelivr'] = '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js'
-  jsUrls['copy_code'] = {}
-  jsUrls['copy_code']['jsdelivr'] = 'https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js'
+  // var jsUrls = {}
+  // jsUrls['vue'] = {}
+  // jsUrls['vue']['jsdelivr'] = '//cdn.jsdelivr.net/npm/docsify@4'
+  // jsUrls['sidebar_collapse'] = {}
+  // jsUrls['sidebar_collapse']['jsdelivr'] =
+  //   '//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js'
+  // jsUrls['copy_code'] = {}
+  // jsUrls['copy_code']['jsdelivr'] = 'https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js'
 
-  var jsConfig = [ // 需要用到的js加载配置项
-    ['vue', 'jsdelivr'],
-    ['sidebar_collapse', 'jsdelivr'],
-    ['copy_code', 'jsdelivr']
-  ]
+  // var jsConfig = [ // 需要用到的js加载配置项
+  //   ['vue', 'jsdelivr'],
+  //   ['sidebar_collapse', 'jsdelivr'],
+  //   ['copy_code', 'jsdelivr']
+  // ]
 
-  function loadAllCss(_cssUrls, _cssConfig) {
-    _cssConfig.forEach(function (element) {
-      loadCss(element[0], element[1])
-    });
-  }
+  // function loadAllCss(_cssUrls, _cssConfig) {
+  //   _cssConfig.forEach(function (element) {
+  //     loadCss(element[0], element[1])
+  //   });
+  // }
 
-  function loadCss(name, site) {
-    console.log(name, site)
-    var CdnContainer = document.getElementById("cdn-container"); // 根据id获取元素
-    var linkElement = document.createElement("link");
-    linkElement.setAttribute("rel", "stylesheet")
-    linkElement.setAttribute("href", cssUrls[name][site]);
-    CdnContainer.appendChild(linkElement)
-  }
+  // function loadCss(name, site) {
+  //   console.log(name, site)
+  //   var CdnContainer = document.getElementById("cdn-container"); // 根据id获取元素
+  //   var linkElement = document.createElement("link");
+  //   linkElement.setAttribute("rel", "stylesheet")
+  //   linkElement.setAttribute("href", cssUrls[name][site]);
+  //   CdnContainer.appendChild(linkElement)
+  // }
 
-  function loadAllJs(_jsUrls, _jsConfig) {
-    _jsConfig.forEach(function (element) {
-      loadJs(element[0], element[1])
-    });
-  }
+  // function loadAllJs(_jsUrls, _jsConfig) {
+  //   _jsConfig.forEach(function (element) {
+  //     loadJs(element[0], element[1])
+  //   });
+  // }
 
-  function loadJs(name, site) {
-    console.log(name, site)
-    var CdnContainer = document.getElementById("cdn-container"); // 根据id获取元素
-    var linkElement = document.createElement("script");
-    linkElement.setAttribute("src", jsUrls[name][site]);
-    CdnContainer.appendChild(linkElement)
-  }
+  // function loadJs(name, site) {
+  //   console.log(name, site)
+  //   var CdnContainer = document.getElementById("cdn-container"); // 根据id获取元素
+  //   var linkElement = document.createElement("script");
+  //   linkElement.setAttribute("src", jsUrls[name][site]);
+  //   CdnContainer.appendChild(linkElement)
+  // }
+
+  // window.onload = function () {
+  //   loadAllCss(cssUrls, cssConfig)
+  //   loadAllJs(jsUrls, jsConfig)
+  //   renderCssJs()
+  // }
 
   window.onload = function () {
-    loadAllCss(cssUrls, cssConfig)
-    loadAllJs(jsUrls, jsConfig)
+    const numbers = [1, 2, 3, 4, 5];
+
+    const result = numbers.find((element) => {
+      // return element >= 3;
+      if (element ==3){
+        return element 
+      }
+      // return element in [4];
+    });
+
+    console.log(result); // 输出: 3
+    
+    // renderCssJs(function(){
+    //   console.log('renderCssJs callback')
+    // })
   }
+
+
 
 
 </script>

@@ -1,0 +1,26 @@
+{
+    "cssCanUse": {
+        "vue": {
+            "jsdelivr": "//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css",
+            "onmicrosoft": "//jsd.onmicrosoft.cn/npm/docsify@4/lib/themes/vue.css"
+        },
+        "sidebar_collapse_folder": {
+            "jsdelivr": "//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css"
+        },
+        "sidebar_collapse_arrow": {
+            "jsdelivr": "//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"
+        }
+    },
+    "jsCanUse": {
+        "vue": {
+            "jsdelivr": "//cdn.jsdelivr.net/npm/docsify@4"
+        },
+        "sidebar_collapse": {
+            "jsdelivr": "//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"
+        },
+        "copy_code": {
+            "jsdelivr": "//cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"
+        }
+    },
+    "css"
+}
