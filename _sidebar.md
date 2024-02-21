@@ -1,13 +1,18 @@
 * [首页](/)
 * Javascript
-    * NodeJS从入门到实战系列教程
-        * [01.NodeJS介绍](/Javascript/NodeJS从入门到实战系列教程/01.NodeJS介绍)
-        * [02.NodeJS安装](/Javascript/NodeJS从入门到实战系列教程/02.NodeJS安装)
-        * [03.NodeJS框架](/Javascript/NodeJS从入门到实战系列教程/03.NodeJS框架)
-    * [NodeJS安装](/Javascript/NodeJS安装)
-    * [Vue3快速使用](/Javascript/Vue3快速使用)
+  * NodeJS从入门到实战系列教程
+    - [01.NodeJS介绍](/Javascript/NodeJS从入门到实战系列教程/01.NodeJS介绍.md)
+    - [02.NodeJS安装](/Javascript/NodeJS从入门到实战系列教程/02.NodeJS安装.md)
+    - [03.NodeJS框架](/Javascript/NodeJS从入门到实战系列教程/03.NodeJS框架.md)
+  - [NodeJS安装](/Javascript/NodeJS安装.md)
+  - [Vue3快速使用](/Javascript/Vue3快速使用.md)
 * PHP
-    * [PhpStudy搭建PHP开发环境](/PHP/PhpStudy搭建PHP开发环境)
-    * [PhpStudy如何自行安装PHP](/PHP/PhpStudy如何自行安装PHP)
+  - [PhpStudy如何自行安装PHP](/PHP/PhpStudy如何自行安装PHP.md)
+  - [PhpStudy搭建PHP开发环境](/PHP/PhpStudy搭建PHP开发环境.md)
+- [docker安装PHP](/docker安装PHP.md)
+* static
 * 其他
-    * [使用docsify将markdown文档发布到git站点](/其他/使用docsify将markdown文档发布到git站点)
+  * 使用docsify将markdown文档发布到git站点-static
+  - [使用docsify将markdown文档发布到git站点](/其他/使用docsify将markdown文档发布到git站点.md)
+- [写在前面](/写在前面.md)
+* 小贴士
