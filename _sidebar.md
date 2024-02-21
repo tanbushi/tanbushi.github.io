@@ -1,7 +1,5 @@
 * [首页](/)
 * Javascript
-  * .static
-    * aaa
   * NodeJS从入门到实战系列教程
     - [01.NodeJS介绍](/docs/Javascript/NodeJS从入门到实战系列教程/01.NodeJS介绍.md)
     - [02.NodeJS安装](/docs/Javascript/NodeJS从入门到实战系列教程/02.NodeJS安装.md)

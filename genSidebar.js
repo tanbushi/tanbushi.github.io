@@ -18,13 +18,10 @@ function walkSync(currentDirPath, prefixBlank, callback) {
 }
 
 walkSync(curPath, '', function (filePath, stat) {
-    console.log('- filePath', filePath)
     if (".md" == path.extname(filePath).toLowerCase()
         && '_' != path.basename(filePath).substr(0, 1)
         && 'README.md' != path.basename(filePath)) {
         var relativeFilePath = filePath.substr(curPath.length);
-        console.log('-- relativeFilePath',relativeFilePath)
-        //console.log("file:"+ path.basename(filePath).slice(1));
         var itemText = relativeFilePath.substr(1, relativeFilePath.length - 4);
         while (itemText.indexOf('/') > 0) {
             itemText = itemText.substr(itemText.indexOf('/') + 1);
