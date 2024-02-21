@@ -90,7 +90,7 @@ docsify serve
 需要在根目录创建 .nojekyll 命名的空文件，阻止 GitHub Pages 忽略命名是下划线开头的文件。
 在浏览器里访问 [http://localhost:3000](http://localhost:3000)，得到侧边栏结果如图：
 
-![侧边栏](./使用docsify将markdown文档发布到git站点-static/侧边栏.jpg)
+![侧边栏](./使用docsify将markdown文档发布到git站点-侧边栏.jpg)
 
 ### 3.8 显示目录
 自定义侧边栏同时也可以开启目录功能。设置 index.html 中的 subMaxLevel 配置项。
