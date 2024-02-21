@@ -19,9 +19,10 @@ function walkSync(currentDirPath, prefixBlank, callback) {
 
 walkSync(curPath, '', function (filePath, stat) {
     if (".md" == path.extname(filePath).toLowerCase()
-        && '_' != path.basename(filePath).substr(0, 1)
+        && '_' != path.basename(filePath)[0]
         && 'README.md' != path.basename(filePath)) {
         var relativeFilePath = filePath.substr(curPath.length);
+        relativeFilePath = relativeFilePath.replaceAll('\\', '/')// 将windows下的相对目录中的\变成linux中的/
         var itemText = relativeFilePath.substr(1, relativeFilePath.length - 4);
         while (itemText.indexOf('/') > 0) {
             itemText = itemText.substr(itemText.indexOf('/') + 1);
@@ -34,7 +35,7 @@ walkSync(curPath, '', function (filePath, stat) {
 fs.writeFile(path.resolve('./') + '/_sidebar.md', sidebarTxt, function (err) {
     if (err) {
         console.error(err);
-    }else{
+    } else {
         console.log('_sidebar.md 创建成功！')
     }
 });
