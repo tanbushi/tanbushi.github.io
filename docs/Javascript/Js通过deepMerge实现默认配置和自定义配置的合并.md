@@ -1,7 +1,7 @@
 # Js通过deepMerge实现默认配置和自定义配置的合并
 > 在做自定义配置文件时，为了简化操作，采用了默认配置基础上的用户自定义配置，发现使用 deepMerge 库可以轻松灵活实现。提示：请确保您的计算机安装了 NodeJS 运行环境。
 ## 1 实现目标
-通过 defaultConfig 对象进行默认配置，可以确保在没有进行用户配置的前提下，系统可以按照默认配置进行运行，使应用能够“开箱即用”，提升用户体验；当用户需要满足各种不同需要的应用时，可以通过 userConfig 对象进行用户功能配置，满足灵活应用的需要。
+通过 defaultConfig 对象默认配置值，可以确保在没有进行用户配置的情况下，系统按照默认配置运行，使应用能够“开箱即用”，提升用户体验；当用户需要满足各种不同需要时，可以通过 userConfig 对象进行用户功能配置，满足灵活应用的需要。
 ## 2 关于 deepMerge
 ### 2.1 deepMerge 库相关介绍
 deepMerge 库可以通过 npm 安装，安装包的链接为：[https://www.npmjs.com/package/deepmerge](https://www.npmjs.com/package/deepmerge)，github 仓库地址为：[github.com/TehShrike/deepmerge](github.com/TehShrike/deepmerge)。
@@ -18,14 +18,14 @@ const merge = require('deepmerge')
 ```javascript
 merge(x, y, [options])
 ```
-深度合并连个对象 x 和 y ，返回一个新的合并后的对象，元素来自 x 和 y ， x 和 y 都不会发生改变。
-注意：上面的 option 是可选项，默认情况下（即没有输入 option 时），两个对象的数组会连接起来。
+深度合并两个对象 x 和 y ，返回一个新的合并后的对象，元素来自 x 和 y ， x 和 y 都不会发生改变。
+注意：上面的 options 是可选项，默认情况下（即没有输入 options 时），两个对象的数组会连接起来。
 - 下面的代码测试 deepMerge 库默认配置下的效果：
 
 ```javascript
 const merge = require('deepmerge')
 
-// 下面定义数组覆盖选项，当要实现数组覆盖的时候，可以在merge时使用该选项
+// 下面定义数组覆盖选项，当要实现数组覆盖的时候，可以在 merge 时使用该选项
 const overwriteMerge = (destinationArray, sourceArray, options) => sourceArray
 
 let x = {
@@ -48,11 +48,9 @@ let y = {
     }
 }
 
-
 let z1 = merge(x, y)
 console.log('下面采用默认选项的 merge 结果：')
 console.log(z1)
-
 
 let z2 = merge(x, y, { arrayMerge: overwriteMerge })
 console.log('下面采用数组覆盖选项的 merge 结果：')
@@ -87,22 +85,23 @@ console.log(z2)
 - 结果解析  
 1）值类型会被覆盖  
 值类型为：字符串（string）、数值（number）、布尔值（boolean）、null、undefined，当 x，y 对象中有相同的key 对应的数据类型为值类型时，值会被覆盖，如：  
-x.a.a1='A1'  
-y.a.a1='A1-new'  
-merge的结果就是 'A1-new' 会覆盖 'A1'，z.a.a1='A1-new'  
+x.a.a1 = 'A1'  
+y.a.a1 = 'A1-new'  
+merge的结果就是 'A1-new' 会覆盖 'A1'，z.a.a1 = 'A1-new'  
 2）“左侧”内容会保留  
-如x （左侧）中存在，但 y（右侧） 中不存在，则 x 的内容会被保留，如：x.a.a2='A2',y.a.a2不存在，所以：z.a.a2='A2'（x.a.a2 被保留）  
+如某键在 x （左侧）中存在，在 y（右侧） 中不存在，则 x 的内容会被保留，如：x.a.a2 = 'A2', y.a.a2不存在，所以：z.a.a2 = 'A2'（ x.a.a2 被保留在 z.a.a2 中）  
 3）默认配置下引用类型：对象（Object）、数组（Array）默认会合并  
-如对象属性：x.a.a3不存在，y.a.a3='created'，y.a.a3的内容就被合并到 z 中，z.a.a3='created'  
-如数组元素：x.b.b1=['B1']，y.b.b1=['B2']，此两项内容被合并到 z 中，z.b.b1=['B1','B2']  
-4）配置数组属性覆盖
-当配置数组属性覆盖时，在 merge 后的对象 z 里，z.b.b1的值取 y.b.b1 的值：['B2']，即z.b.b1=['B2'] 
+如对象属性：x.a.a3 不存在，y.a.a3 = 'created'，y.a.a3的内容就被合并到 z 中，z.a.a3 = 'created'  
+如数组元素：x.b.b1 = [ 'B1' ]，y.b.b1 = [ 'B2' ]，此两项内容被合并到 z 中，z.b.b1 = [ 'B1', 'B2' ]  
+4）配置数组属性覆盖  
+当配置数组属性覆盖时，在 merge 后的对象 z 里，z.b.b1 的值取 y.b.b1 的值，即z.b.b1= [ 'B2' ] 
 ## 3 应用测试
 创建 test-merge.js 文件，编写代码如下
 ```javascript
 const merge = require('deepmerge')
-
-// 下面定义数组覆盖选项，当要实现数组覆盖的时候，可以在merge时使用该选项
+```
+下面定义数组覆盖选项，当要实现数组覆盖的时候，可以在merge时使用该选项
+```javascript
 const overwriteMerge = (destinationArray, sourceArray, options) => sourceArray
 ```
 ### 3.1 defaultConfig 的对象定义
