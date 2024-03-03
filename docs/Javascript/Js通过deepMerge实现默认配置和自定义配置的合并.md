@@ -4,6 +4,7 @@
 通过 defaultConfig 对象默认配置值，可以确保在没有进行用户配置的情况下，系统按照默认配置运行，使应用能够“开箱即用”，提升用户体验；当用户需要满足各种不同需要时，可以通过 userConfig 对象进行用户功能配置，满足灵活应用的需要。
 ## 2 关于 deepMerge
 ### 2.1 deepMerge 库相关介绍
+![deepmerge](_static/Js通过deepMerge实现默认配置和自定义配置的合并-01.jpg)
 deepMerge 库可以通过 npm 安装，安装包的链接为：[https://www.npmjs.com/package/deepmerge](https://www.npmjs.com/package/deepmerge)，github 仓库地址为：[github.com/TehShrike/deepmerge](github.com/TehShrike/deepmerge)。
 ### 2.2 deepMerge 的引入
 可以在 Shell 里运行下面的命令安装：
