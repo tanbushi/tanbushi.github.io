@@ -4,3 +4,5 @@
   - [Node下几十行代码实现炫酷的Markdow转HTML效果](/docs/Javascript/Node下几十行代码实现炫酷的Markdow转HTML效果.md)
 * 其他
   - [使用Git-ftp实现网站代码发布的版本管理](/docs/其他/使用Git-ftp实现网站代码发布的版本管理.md)
+* 小贴士
+  - [小贴士-分享macOS中几个“隐藏”的快捷功能](/docs/小贴士/小贴士-分享macOS中几个“隐藏”的快捷功能.md)
