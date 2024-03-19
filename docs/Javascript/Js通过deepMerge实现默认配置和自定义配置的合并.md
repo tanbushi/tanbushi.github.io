@@ -10,7 +10,7 @@
 
 ### 2.1 deepMerge 库相关介绍
 
-![图1  deepmerge](_static/Js通过deepMerge实现默认配置和自定义配置的合并-01.jpg#pic_center)
+![图1  deepmerge](_static/Js通过deepMerge实现默认配置和自定义配置的合并-01.jpg)
 deepMerge 库可以通过 npm 安装。
 
 安装包的链接为：[https://www.npmjs.com/package/deepmerge](https://www.npmjs.com/package/deepmerge)，
