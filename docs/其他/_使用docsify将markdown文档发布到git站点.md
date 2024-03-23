@@ -114,3 +114,18 @@ Github Pages 官网入口：[https://pages.github.com/](https://pages.github.com
 
 选择一个主题：Choose a Theme
 
+
+注意，如何让生成的页面图片居中，修改 idnex.html 文件，
+
+1）在 body 标签中添加 class="docsify-content"
+<body class="docsify-content">
+
+2）添加如下样式：
+<style>
+  .docsify-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
