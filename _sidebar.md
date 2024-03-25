@@ -11,6 +11,7 @@
     - [Docker搭建LNMP环境实战（01）：前言](/docs/PHP/Docker搭建LNMP环境实战/Docker搭建LNMP环境实战（01）：前言.md)
     - [Docker搭建LNMP环境实战（02）：Win10下安装VMware](/docs/PHP/Docker搭建LNMP环境实战/Docker搭建LNMP环境实战（02）：Win10下安装VMware.md)
     - [Docker搭建LNMP环境实战（03）：VMware安装CentOS](/docs/PHP/Docker搭建LNMP环境实战/Docker搭建LNMP环境实战（03）：VMware安装CentOS.md)
+    - [Docker搭建LNMP环境实战（04）：安装VMwareTools共享文件夹](/docs/PHP/Docker搭建LNMP环境实战/Docker搭建LNMP环境实战（04）：安装VMwareTools共享文件夹.md)
   - [PhpStudy让电脑秒变多站点Web服务器](/docs/PHP/PhpStudy让电脑秒变多站点Web服务器.md)
 * 其他
   - [使用Git-ftp实现网站代码发布的版本管理](/docs/其他/使用Git-ftp实现网站代码发布的版本管理.md)
