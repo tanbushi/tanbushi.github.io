@@ -196,9 +196,13 @@ service docker restart # 为了保险起见，卸载完成后重启一下docker�
 
 在浏览器里输入：http://api.test.site/testdb.php；
 返回结果如下：
-![testdb.php返回的结果](_static/Docker搭建LNMP环境实战（09）：安装mariadb-04.jpg)
+![图4  testdb.php返回的结果](_static/Docker搭建LNMP环境实战（09）：安装mariadb-04.jpg)
+<center>图4  testdb.php返回的结果</center>
 testdb.php的功能是查出mysql.user数据表里用户的个数信息，返回结果为1行，用户数为3，和下图MySQL-Front客户端查询的结果对上了。
-![mysql.user数据表里的用户信息](_static/Docker搭建LNMP环境实战（09）：安装mariadb-05.jpg)
+
+![图5  mysql.user数据表里的用户信息](_static/Docker搭建LNMP环境实战（09）：安装mariadb-05.jpg)
+<center>图5  mysql.user数据表里的用户信息</center>
+
 至此，php-fpm利用PDO连接mariadb数据库成功！
 
 **5）进入php-fpm容器后，安装PDO的脚本**
