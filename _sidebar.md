@@ -21,6 +21,7 @@
 * docker
   * 手搓Docker-Image-Creator（DIC）工具
     - [手搓Docker-Image-Creator（DIC）工具（01）：前言](/docs/docker/手搓Docker-Image-Creator（DIC）工具/手搓Docker-Image-Creator（DIC）工具（01）：前言.md)
+    - [手搓Docker-Image-Creator（DIC）工具（02）：预备知识](/docs/docker/手搓Docker-Image-Creator（DIC）工具/手搓Docker-Image-Creator（DIC）工具（02）：预备知识.md)
 * 其他
   - [使用Git-ftp实现网站代码发布的版本管理](/docs/其他/使用Git-ftp实现网站代码发布的版本管理.md)
 * 小贴士

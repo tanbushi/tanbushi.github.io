@@ -71,3 +71,6 @@ docker-image-builder —— DIB项目根目录
 - 考虑到 Windows、macOS 是平时工作、学习最常用的操作系统，因此只在 Windows、macOS 上测试
 - 此项目由于是临时发起，边学边写，所以不会很严谨，欢迎拍砖、更希望能引玉
 - 原创码字不易，欢迎评论、点赞、收藏、关注
+
+>下一节内容介绍 —— 预备知识
+>主要简单介绍一下 Docker、Dockerfile 的基本概念，Dockerfile 对的基本语法，Windows 和 macOS 下 Docker 桌面的安装，Docker 镜像的创建和运行测试等。
