@@ -17,6 +17,7 @@
     - [Docker搭建LNMP环境实战（07）：安装nginx](/docs/PHP/Docker搭建LNMP环境实战/Docker搭建LNMP环境实战（07）：安装nginx.md)
     - [Docker搭建LNMP环境实战（08）：安装php-fpm](/docs/PHP/Docker搭建LNMP环境实战/Docker搭建LNMP环境实战（08）：安装php-fpm.md)
     - [Docker搭建LNMP环境实战（09）：安装mariadb](/docs/PHP/Docker搭建LNMP环境实战/Docker搭建LNMP环境实战（09）：安装mariadb.md)
+    - [Docker搭建LNMP环境实战（10）：大结局！脚本化一次性安装测试、生产环境](/docs/PHP/Docker搭建LNMP环境实战/Docker搭建LNMP环境实战（10）：大结局！脚本化一次性安装测试、生产环境.md)
   - [PhpStudy让电脑秒变多站点Web服务器](/docs/PHP/PhpStudy让电脑秒变多站点Web服务器.md)
 * docker
   * 手搓Docker-Image-Creator（DIC）工具

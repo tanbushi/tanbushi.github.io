@@ -23,7 +23,7 @@
 ## 4 项目结构
 项目结构如下：
 ```
-docker-image-builder —— DIB项目根目录
+docker-image-creator —— DIB项目根目录
   |— apps —— 应用集合
   |   |— app1 —— 应用1
   |   |   |— framework —— 框架 framework 的软连接，引入框架在app内部使用
