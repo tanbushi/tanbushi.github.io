@@ -1,5 +1,6 @@
 * [首页](/)
 * AI大模型
+  - [Docker环境下部署qsign签名服务器](/docs/AI大模型/Docker环境下部署qsign签名服务器.md)
   - [Docker部署基于alpine的go-cqhttp](/docs/AI大模型/Docker部署基于alpine的go-cqhttp.md)
   - [试用AI做方案设计，通义灵码——一个博学但“健忘”的智能编码辅助工具](/docs/AI大模型/试用AI做方案设计，通义灵码——一个博学但“健忘”的智能编码辅助工具.md)
   - [零基础尝试调用通义千问API的过程记录](/docs/AI大模型/零基础尝试调用通义千问API的过程记录.md)
