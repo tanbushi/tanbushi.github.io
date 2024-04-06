@@ -74,11 +74,11 @@ networks:
 
 
 ## 5 扩展
-### 4.1 go-cqhttp 和 qsign 是分开还是合在一个docker里
+### 5.1 go-cqhttp 和 qsign 是分开还是合在一个docker里
 一般建议将go-cqhttp和qsign分开部署在不同的Docker容器中，以保持系统的模块化、易维护性、资源隔离和故障隔离优势，更关键还有就是容易扩充和分布式部署，满足负载均衡的需要。
 只有当两个服务间存在极为紧密的关联，资源需求高度一致，且通信效率要求极高时，才考虑将其合并部署在同一容器内。实际决策应依据具体项目需求、资源状况和运维策略来确定。
 此处我们决定采用分离的方式。
-### 4.2 将dockerhub里的镜像存储到本地
+### 5.2 将dockerhub里的镜像存储到本地
 对于比较难找的镜像，为了便于以后加载使用，避免出现上传用户删除镜像导致以后找不到该镜像的情况，所以需要将镜像保存到本地。
 - 保存镜像
 使用 docker save 命令：
@@ -95,6 +95,7 @@ docker load -i xzhouqd_qsign_8.9.63.tar
 
 # 参考文章
 [Linux服务器下 签名服务器+Mirai部署 详细教程](https://zhuanlan.zhihu.com/p/652785933)
+
 [使用qsign解决gocq启动code45报错 - 知乎](https://zhuanlan.zhihu.com/p/648839865?utm_id=0)
 
 
